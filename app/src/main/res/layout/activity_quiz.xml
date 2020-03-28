@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="30dp"
+    tools:context=".QuizActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstRelLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:textStyle="bold"
+            android:id="@+id/txtScore"
+            android:freezesText="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Question: 1/x"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtScore"
+            android:id="@+id/txtQuestionLeft"
+            android:freezesText="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTimer"
+            android:textStyle="bold"
+            android:text="00:30"
+            android:textSize="35sp"
+            android:layout_alignParentRight="true"
+            android:freezesText="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstRelLayout"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I am question ?"
+            android:textSize="30sp"
+            android:id="@+id/txtQuestion"
+            android:freezesText="true"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_below="@+id/txtQuestion"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="option 1"
+                android:id="@+id/rbOption1"
+                android:freezesText="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="option 2"
+                android:id="@+id/rbOption2"
+                android:freezesText="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="option 3"
+                android:id="@+id/rbOption3"
+                android:freezesText="true"/>
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnNext"
+            android:text="Next"
+            android:freezesText="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
